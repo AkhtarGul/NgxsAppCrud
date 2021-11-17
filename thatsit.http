@@ -1,0 +1,36 @@
+
+@live = https://thatsitapi.herokuapp.com
+@local= https://thatsitapi.herokuapp.com
+
+### Host
+@host={{live}}
+
+### Get
+GET  {{host}}/api/categories HTTP/1.1
+
+### Get 1
+GET  {{host}}/api/categories/11 HTTP/1.1
+
+### Get 1
+DELETE {{host}}/api/categories/17 HTTP/1.1
+
+### Create
+# @name createToken
+POST {{host}}/api/categories HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Movies 11"
+}
+ 
+
+### Create
+# @name PUT
+PUT {{host}}/api/categories/11 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Movies",
+    "id": "11"
+}
+ 

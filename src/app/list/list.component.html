@@ -1,0 +1,36 @@
+
+
+
+    <div class=" table-responsive table-bordered">
+      
+        <table class="table table-hover" cellspacing="0">
+            <thead>
+                <tr>
+                    <th scope="col"  >Movies Name</th>
+
+
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody class="text-center">
+                <tr *ngFor="let item of movies$ | async ">
+
+                    <td class="align-right">
+                        {{item.name}}
+                    </td>
+                   
+                    <td class="align-right">
+                        <DIV class="btn-group">
+                            <button ngClass="status-button btn btn-md btn-primary" (click)="onSelectDlg(item)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
+                            <!-- <button ngClass="status-button btn btn-md btn-primary" (click)="onSelect(item)"><i class="fa fa-trash-o"></i>Edit</button> -->
+                            <button ngClass="status-button btn btn-md btn-danger" (click)="onDelete(item)"><i class="fa fa-trash-o"></i>Delete</button>
+                        </DIV>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   
+    </div>
+
+ 
